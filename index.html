@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>精彩瞬间</title>
+	<style>
+		body {
+			background-color: rgb(119, 157, 193);
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		.container {
+			position: relative;
+			width: 100%;
+			height: 500px;
+			overflow: hidden;
+		}
+
+		.slider {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: flex;
+			width: 400%;
+			height: 100%;
+			animation: slide 10s linear infinite;
+		}
+
+		.slide {
+			flex-shrink: 0;
+			width: 25%;
+			height: 100%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+
+		.slide1 {
+			background-image: url("tu127.jpg");
+		}
+
+		.slide2 {
+			background-image: url("tu128.jpg");
+		}
+
+		.slide3 {
+			background-image: url("tu129.jpg");
+		}
+
+		.slide4 {
+			background-image: url("tu130.jpg");
+		}
+
+		@keyframes slide {
+			0% {
+				transform: translateX(0%);
+			}
+			20% {
+				transform: translateX(0%);
+			}
+			25% {
+				transform: translateX(-25%);
+			}
+			45% {
+				transform: translateX(-25%);
+			}
+			50% {
+				transform: translateX(-50%);
+			}
+			70% {
+				transform: translateX(-50%);
+			}
+			75% {
+				transform: translateX(-75%);
+			}
+			95% {
+				transform: translateX(-75%);
+			}
+			100% {
+				transform: translateX(0%);
+			}
+		}
+
+		.button {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			width: 100px;
+			height: 40px;
+			background-color: #333;
+			color: #fff;
+			border-radius: 4px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="slider">
+			<div class="slide slide1"></div>
+			<div class="slide slide2"></div>
+			<div class="slide slide3"></div>
+			<div class="slide slide4"></div>
+		</div>
+	</div>
+	<button class="button">回到开始</button>
+	<script>
+		var button = document.querySelector('.button');
+		button.addEventListener('click', function() {
+			window.location.href = "b.html"; // 替换为目标网页的 URL
+		});
+	</script>
+</body>
+</html>
